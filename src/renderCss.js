@@ -16,10 +16,10 @@ var calcHash = function(options) {
 }
 
 var makeUrls = function(options) {
-	var hash = calcHash(options)
+	var hash = options.fontHash ? '?' + calcHash(options) : ''
 	var baseUrl = options.cssFontsUrl && options.cssFontsUrl.replace(/\\/g, '/')
 	var urls = _.map(options.types, function(type) {
-		var fontName = options.fontName + '.' + type + '?' + hash
+    var fontName = options.fontName + '.' + type + hash
 		return baseUrl ? urlJoin(baseUrl, fontName) : fontName
 	})
 	return _.object(options.types, urls)

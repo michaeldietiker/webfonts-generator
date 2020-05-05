@@ -22,6 +22,7 @@ var DEFAULT_TEMPLATE_OPTIONS = {
 var DEFAULT_OPTIONS = {
 	writeFiles: true,
 	fontName: 'iconfont',
+  fontHash: true,
 	css: true,
 	cssTemplate: TEMPLATES.css,
 	html: false,
