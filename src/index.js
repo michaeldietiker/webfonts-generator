@@ -115,10 +115,6 @@ function writeFile(content, dest) {
 }
 
 function writeResult(fonts, options) {
-	_.each(fonts, function(content, type) {
-		var filepath = path.join(options.dest, options.fontName + '.' + type)
-		writeFile(content, filepath)
-	})
 	if (options.css) {
 		var css = renderCss(options)
 		writeFile(css, options.cssDest)
